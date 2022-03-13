@@ -123,7 +123,6 @@ namespace Work_at_11._03._22
             this.labelPOL.Size = new System.Drawing.Size(27, 13);
             this.labelPOL.TabIndex = 6;
             this.labelPOL.Text = "Пол";
-            this.labelPOL.Click += new System.EventHandler(this.labelPOL_Click);
             // 
             // labelDiagnoz
             // 
@@ -164,6 +163,7 @@ namespace Work_at_11._03._22
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // dateTime
             // 
@@ -236,6 +236,7 @@ namespace Work_at_11._03._22
             this.MaximumSize = new System.Drawing.Size(519, 395);
             this.Name = "SecondForm";
             this.Text = "SecondForm";
+            this.Load += new System.EventHandler(this.SecondForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.photoCHEL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

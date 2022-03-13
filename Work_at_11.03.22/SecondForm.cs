@@ -12,14 +12,10 @@ namespace Work_at_11._03._22
 {
     public partial class SecondForm : Form
     {
+        private Person person;
         public SecondForm()
         {
             InitializeComponent();
-        }
-
-        private void labelPOL_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void OpenPhoto_Click(object sender, EventArgs e)
@@ -35,6 +31,26 @@ namespace Work_at_11._03._22
             MainForm frm5 = new MainForm();
             frm5.Show();
             this.Hide();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            ActiveForm.Close();
+        }
+
+        private void SecondForm_Load(object sender, EventArgs e)
+        {
+            NameBox.Text = person.name;
+            SurnameBox.Text = person.surname;
+            if (Female.Checked)
+            {
+                Female.Checked = person.pol;
+            }
+            else
+            {
+                Male.Checked = person.pol;
+            }
+            dateTime.Value = person.dateBirth;
         }
     }
 }
