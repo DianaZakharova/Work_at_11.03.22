@@ -43,6 +43,8 @@ namespace Work_at_11._03._22
             this.Name_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.POL = new System.Windows.Forms.TextBox();
+            this.Data = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitter)).BeginInit();
             this.splitter.Panel1.SuspendLayout();
             this.splitter.Panel2.SuspendLayout();
@@ -53,6 +55,7 @@ namespace Work_at_11._03._22
             // 
             // splitter
             // 
+            this.splitter.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.splitter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitter.Location = new System.Drawing.Point(0, 0);
             this.splitter.Name = "splitter";
@@ -63,6 +66,8 @@ namespace Work_at_11._03._22
             // 
             // splitter.Panel2
             // 
+            this.splitter.Panel2.Controls.Add(this.Data);
+            this.splitter.Panel2.Controls.Add(this.POL);
             this.splitter.Panel2.Controls.Add(this.Palka);
             this.splitter.Panel2.Controls.Add(this.Info);
             this.splitter.Panel2.Controls.Add(this.AgeDate);
@@ -71,9 +76,10 @@ namespace Work_at_11._03._22
             this.splitter.Panel2.Controls.Add(this.New);
             this.splitter.Panel2.Controls.Add(this.pictureBox1);
             this.splitter.Size = new System.Drawing.Size(800, 450);
-            this.splitter.SplitterDistance = 434;
+            this.splitter.SplitterDistance = 431;
             this.splitter.SplitterWidth = 10;
             this.splitter.TabIndex = 0;
+            this.splitter.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter_SplitterMoved);
             // 
             // tableINFO
             // 
@@ -89,16 +95,18 @@ namespace Work_at_11._03._22
             this.Age_column,
             this.Gender_column});
             this.tableINFO.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tableINFO.Location = new System.Drawing.Point(0, 0);
+            this.tableINFO.Location = new System.Drawing.Point(3, 0);
             this.tableINFO.Name = "tableINFO";
-            this.tableINFO.Size = new System.Drawing.Size(431, 150);
+            this.tableINFO.Size = new System.Drawing.Size(428, 447);
             this.tableINFO.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(21, 196);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 150);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -143,7 +151,7 @@ namespace Work_at_11._03._22
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.AgeDate.AutoSize = true;
-            this.AgeDate.Location = new System.Drawing.Point(169, 111);
+            this.AgeDate.Location = new System.Drawing.Point(140, 111);
             this.AgeDate.Name = "AgeDate";
             this.AgeDate.Size = new System.Drawing.Size(87, 13);
             this.AgeDate.TabIndex = 4;
@@ -197,12 +205,27 @@ namespace Work_at_11._03._22
             this.Gender_column.HeaderText = "Gender";
             this.Gender_column.Name = "Gender_column";
             // 
+            // POL
+            // 
+            this.POL.Location = new System.Drawing.Point(69, 108);
+            this.POL.Name = "POL";
+            this.POL.Size = new System.Drawing.Size(39, 20);
+            this.POL.TabIndex = 7;
+            // 
+            // Data
+            // 
+            this.Data.Location = new System.Drawing.Point(233, 108);
+            this.Data.Name = "Data";
+            this.Data.Size = new System.Drawing.Size(69, 20);
+            this.Data.TabIndex = 8;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitter);
+            this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "MainForm";
             this.Text = "Page";
             this.splitter.Panel1.ResumeLayout(false);
@@ -232,6 +255,8 @@ namespace Work_at_11._03._22
         private System.Windows.Forms.DataGridViewTextBoxColumn Name_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender_column;
+        private System.Windows.Forms.TextBox Data;
+        private System.Windows.Forms.TextBox POL;
     }
 }
 

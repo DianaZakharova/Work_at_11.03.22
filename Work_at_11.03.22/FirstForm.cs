@@ -30,5 +30,10 @@ namespace Work_at_11._03._22
             frm3.Show();
             this.Hide();
         }
+
+        private void splitter_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }

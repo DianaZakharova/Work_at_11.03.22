@@ -16,5 +16,12 @@ namespace Work_at_11._03._22
         {
             InitializeComponent();
         }
+
+        private void Nazad_Click(object sender, EventArgs e)
+        {
+            MainForm frm4 = new MainForm();
+            frm4.Show();
+            this.Hide();
+        }
     }
 }

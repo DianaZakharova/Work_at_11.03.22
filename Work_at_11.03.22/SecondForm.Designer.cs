@@ -42,11 +42,16 @@ namespace Work_at_11._03._22
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
+            this.DateRoz = new System.Windows.Forms.Label();
+            this.photoCHEL = new System.Windows.Forms.PictureBox();
+            this.OpenPhoto = new System.Windows.Forms.Button();
+            this.NAZ = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.photoCHEL)).BeginInit();
             this.SuspendLayout();
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(117, 27);
+            this.NameBox.Location = new System.Drawing.Point(226, 9);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(57, 20);
             this.NameBox.TabIndex = 0;
@@ -57,7 +62,7 @@ namespace Work_at_11._03._22
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(35, 27);
+            this.labelName.Location = new System.Drawing.Point(154, 12);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(29, 13);
             this.labelName.TabIndex = 1;
@@ -69,7 +74,7 @@ namespace Work_at_11._03._22
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSurname.AutoSize = true;
-            this.labelSurname.Location = new System.Drawing.Point(35, 59);
+            this.labelSurname.Location = new System.Drawing.Point(154, 46);
             this.labelSurname.Name = "labelSurname";
             this.labelSurname.Size = new System.Drawing.Size(56, 13);
             this.labelSurname.TabIndex = 2;
@@ -77,7 +82,7 @@ namespace Work_at_11._03._22
             // 
             // SurnameBox
             // 
-            this.SurnameBox.Location = new System.Drawing.Point(117, 59);
+            this.SurnameBox.Location = new System.Drawing.Point(226, 43);
             this.SurnameBox.Name = "SurnameBox";
             this.SurnameBox.Size = new System.Drawing.Size(57, 20);
             this.SurnameBox.TabIndex = 3;
@@ -88,7 +93,7 @@ namespace Work_at_11._03._22
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Female.AutoSize = true;
-            this.Female.Location = new System.Drawing.Point(40, 115);
+            this.Female.Location = new System.Drawing.Point(226, 79);
             this.Female.Name = "Female";
             this.Female.Size = new System.Drawing.Size(33, 17);
             this.Female.TabIndex = 4;
@@ -102,7 +107,7 @@ namespace Work_at_11._03._22
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Male.AutoSize = true;
-            this.Male.Location = new System.Drawing.Point(88, 115);
+            this.Male.Location = new System.Drawing.Point(265, 79);
             this.Male.Name = "Male";
             this.Male.Size = new System.Drawing.Size(33, 17);
             this.Male.TabIndex = 5;
@@ -113,7 +118,7 @@ namespace Work_at_11._03._22
             // labelPOL
             // 
             this.labelPOL.AutoSize = true;
-            this.labelPOL.Location = new System.Drawing.Point(37, 99);
+            this.labelPOL.Location = new System.Drawing.Point(154, 81);
             this.labelPOL.Name = "labelPOL";
             this.labelPOL.Size = new System.Drawing.Size(27, 13);
             this.labelPOL.TabIndex = 6;
@@ -126,7 +131,7 @@ namespace Work_at_11._03._22
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDiagnoz.AutoSize = true;
-            this.labelDiagnoz.Location = new System.Drawing.Point(197, 27);
+            this.labelDiagnoz.Location = new System.Drawing.Point(12, 199);
             this.labelDiagnoz.Name = "labelDiagnoz";
             this.labelDiagnoz.Size = new System.Drawing.Size(51, 13);
             this.labelDiagnoz.TabIndex = 7;
@@ -134,42 +139,88 @@ namespace Work_at_11._03._22
             // 
             // DiagnoxBox
             // 
-            this.DiagnoxBox.Location = new System.Drawing.Point(264, 27);
+            this.DiagnoxBox.Location = new System.Drawing.Point(12, 215);
             this.DiagnoxBox.Multiline = true;
             this.DiagnoxBox.Name = "DiagnoxBox";
-            this.DiagnoxBox.Size = new System.Drawing.Size(157, 100);
+            this.DiagnoxBox.Size = new System.Drawing.Size(453, 100);
             this.DiagnoxBox.TabIndex = 8;
             // 
             // buttonSave
             // 
+            this.buttonSave.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.buttonSave.Location = new System.Drawing.Point(108, 321);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.UseVisualStyleBackColor = false;
             // 
             // buttonCancel
             // 
+            this.buttonCancel.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.buttonCancel.Location = new System.Drawing.Point(306, 321);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             // 
             // dateTime
             // 
-            this.dateTime.Location = new System.Drawing.Point(40, 168);
+            this.dateTime.Location = new System.Drawing.Point(265, 111);
             this.dateTime.Name = "dateTime";
             this.dateTime.Size = new System.Drawing.Size(200, 20);
             this.dateTime.TabIndex = 11;
+            // 
+            // DateRoz
+            // 
+            this.DateRoz.AutoSize = true;
+            this.DateRoz.Location = new System.Drawing.Point(154, 117);
+            this.DateRoz.Name = "DateRoz";
+            this.DateRoz.Size = new System.Drawing.Size(86, 13);
+            this.DateRoz.TabIndex = 12;
+            this.DateRoz.Text = "Дата рождения";
+            // 
+            // photoCHEL
+            // 
+            this.photoCHEL.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.photoCHEL.Location = new System.Drawing.Point(12, 12);
+            this.photoCHEL.Name = "photoCHEL";
+            this.photoCHEL.Size = new System.Drawing.Size(128, 139);
+            this.photoCHEL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.photoCHEL.TabIndex = 13;
+            this.photoCHEL.TabStop = false;
+            // 
+            // OpenPhoto
+            // 
+            this.OpenPhoto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.OpenPhoto.Location = new System.Drawing.Point(12, 157);
+            this.OpenPhoto.Name = "OpenPhoto";
+            this.OpenPhoto.Size = new System.Drawing.Size(75, 23);
+            this.OpenPhoto.TabIndex = 14;
+            this.OpenPhoto.Text = ". . .";
+            this.OpenPhoto.UseVisualStyleBackColor = false;
+            this.OpenPhoto.Click += new System.EventHandler(this.OpenPhoto_Click);
+            // 
+            // NAZ
+            // 
+            this.NAZ.Location = new System.Drawing.Point(416, 7);
+            this.NAZ.Name = "NAZ";
+            this.NAZ.Size = new System.Drawing.Size(75, 23);
+            this.NAZ.TabIndex = 15;
+            this.NAZ.Text = "Назад";
+            this.NAZ.UseVisualStyleBackColor = true;
+            this.NAZ.Click += new System.EventHandler(this.NAZ_Click);
             // 
             // SecondForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 356);
+            this.Controls.Add(this.NAZ);
+            this.Controls.Add(this.OpenPhoto);
+            this.Controls.Add(this.photoCHEL);
+            this.Controls.Add(this.DateRoz);
             this.Controls.Add(this.dateTime);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
@@ -182,8 +233,10 @@ namespace Work_at_11._03._22
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.NameBox);
+            this.MaximumSize = new System.Drawing.Size(519, 395);
             this.Name = "SecondForm";
             this.Text = "SecondForm";
+            ((System.ComponentModel.ISupportInitialize)(this.photoCHEL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +257,9 @@ namespace Work_at_11._03._22
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.DateTimePicker dateTime;
+        private System.Windows.Forms.Label DateRoz;
+        private System.Windows.Forms.Button OpenPhoto;
+        private System.Windows.Forms.PictureBox photoCHEL;
+        private System.Windows.Forms.Button NAZ;
     }
 }

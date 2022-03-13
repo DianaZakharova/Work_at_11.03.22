@@ -21,5 +21,20 @@ namespace Work_at_11._03._22
         {
 
         }
+
+        private void OpenPhoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();// создаем диалоговое окно
+            openFile.ShowDialog();// открываем окно
+            string FileName = openFile.FileName;// берем полный адрес картинки            
+            photoCHEL.ImageLocation = FileName;// грузим картинку в pictureBox
+        }
+
+        private void NAZ_Click(object sender, EventArgs e)
+        {
+            MainForm frm5 = new MainForm();
+            frm5.Show();
+            this.Hide();
+        }
     }
 }
