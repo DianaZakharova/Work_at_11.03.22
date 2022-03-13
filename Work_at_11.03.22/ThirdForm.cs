@@ -12,16 +12,20 @@ namespace Work_at_11._03._22
 {
     public partial class ThirdForm : Form
     {
-        public ThirdForm()
+        private Person person;
+        public ThirdForm(Person person)
         {
+            this.person = person;
             InitializeComponent();
         }
 
-        private void Nazad_Click(object sender, EventArgs e)
+        private void ThirdForm_Load(object sender, EventArgs e)
         {
-            MainForm frm4 = new MainForm();
-            frm4.Show();
-            this.Hide();
+            IMIA.Text = person.name;
+            Familia.Text = person.surname;
+            picture.Image = person.image;
+            DIAGNOZ.Text = person.diagnoz;
+            textBoxHIS.Text = person.history;
         }
     }
 }

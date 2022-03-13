@@ -31,26 +31,26 @@ namespace Work_at_11._03._22
         {
             this.splitter = new System.Windows.Forms.SplitContainer();
             this.tableINFO = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.New = new System.Windows.Forms.Button();
-            this.labelNAME = new System.Windows.Forms.Label();
-            this.Gender = new System.Windows.Forms.Label();
-            this.AgeDate = new System.Windows.Forms.Label();
-            this.Info = new System.Windows.Forms.Button();
-            this.Palka = new System.Windows.Forms.Label();
             this.IDcolumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.POL = new System.Windows.Forms.TextBox();
             this.Data = new System.Windows.Forms.TextBox();
+            this.POL = new System.Windows.Forms.TextBox();
+            this.Palka = new System.Windows.Forms.Label();
+            this.Info = new System.Windows.Forms.Button();
+            this.AgeDate = new System.Windows.Forms.Label();
+            this.Gender = new System.Windows.Forms.Label();
+            this.labelNAME = new System.Windows.Forms.Label();
+            this.New = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitter)).BeginInit();
             this.splitter.Panel1.SuspendLayout();
             this.splitter.Panel2.SuspendLayout();
             this.splitter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableINFO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // splitter
@@ -74,12 +74,11 @@ namespace Work_at_11._03._22
             this.splitter.Panel2.Controls.Add(this.Gender);
             this.splitter.Panel2.Controls.Add(this.labelNAME);
             this.splitter.Panel2.Controls.Add(this.New);
-            this.splitter.Panel2.Controls.Add(this.pictureBox1);
+            this.splitter.Panel2.Controls.Add(this.pictureBox);
             this.splitter.Size = new System.Drawing.Size(800, 450);
             this.splitter.SplitterDistance = 431;
             this.splitter.SplitterWidth = 10;
             this.splitter.TabIndex = 0;
-            this.splitter.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter_SplitterMoved);
             // 
             // tableINFO
             // 
@@ -99,86 +98,6 @@ namespace Work_at_11._03._22
             this.tableINFO.Name = "tableINFO";
             this.tableINFO.Size = new System.Drawing.Size(428, 447);
             this.tableINFO.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // New
-            // 
-            this.New.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.New.Location = new System.Drawing.Point(21, 23);
-            this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(300, 33);
-            this.New.TabIndex = 1;
-            this.New.Text = "Добавить нового";
-            this.New.UseVisualStyleBackColor = false;
-            this.New.Click += new System.EventHandler(this.New_Click);
-            // 
-            // labelNAME
-            // 
-            this.labelNAME.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNAME.AutoSize = true;
-            this.labelNAME.Location = new System.Drawing.Point(18, 81);
-            this.labelNAME.Name = "labelNAME";
-            this.labelNAME.Size = new System.Drawing.Size(90, 13);
-            this.labelNAME.TabIndex = 2;
-            this.labelNAME.Text = "Имя и Фамилия";
-            // 
-            // Gender
-            // 
-            this.Gender.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Gender.AutoSize = true;
-            this.Gender.Location = new System.Drawing.Point(18, 111);
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(27, 13);
-            this.Gender.TabIndex = 3;
-            this.Gender.Text = "Пол";
-            // 
-            // AgeDate
-            // 
-            this.AgeDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AgeDate.AutoSize = true;
-            this.AgeDate.Location = new System.Drawing.Point(140, 111);
-            this.AgeDate.Name = "AgeDate";
-            this.AgeDate.Size = new System.Drawing.Size(87, 13);
-            this.AgeDate.TabIndex = 4;
-            this.AgeDate.Text = "Дата Рождения";
-            // 
-            // Info
-            // 
-            this.Info.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Info.Location = new System.Drawing.Point(143, 247);
-            this.Info.Name = "Info";
-            this.Info.Size = new System.Drawing.Size(200, 23);
-            this.Info.TabIndex = 5;
-            this.Info.Text = "Информация";
-            this.Info.UseVisualStyleBackColor = false;
-            this.Info.Click += new System.EventHandler(this.Info_Click);
-            // 
-            // Palka
-            // 
-            this.Palka.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Palka.AutoSize = true;
-            this.Palka.Location = new System.Drawing.Point(118, 111);
-            this.Palka.Name = "Palka";
-            this.Palka.Size = new System.Drawing.Size(9, 13);
-            this.Palka.TabIndex = 6;
-            this.Palka.Text = "|";
             // 
             // IDcolumn
             // 
@@ -205,6 +124,13 @@ namespace Work_at_11._03._22
             this.Gender_column.HeaderText = "Gender";
             this.Gender_column.Name = "Gender_column";
             // 
+            // Data
+            // 
+            this.Data.Location = new System.Drawing.Point(233, 108);
+            this.Data.Name = "Data";
+            this.Data.Size = new System.Drawing.Size(69, 20);
+            this.Data.TabIndex = 8;
+            // 
             // POL
             // 
             this.POL.Location = new System.Drawing.Point(69, 108);
@@ -212,12 +138,85 @@ namespace Work_at_11._03._22
             this.POL.Size = new System.Drawing.Size(39, 20);
             this.POL.TabIndex = 7;
             // 
-            // Data
+            // Palka
             // 
-            this.Data.Location = new System.Drawing.Point(233, 108);
-            this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(69, 20);
-            this.Data.TabIndex = 8;
+            this.Palka.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Palka.AutoSize = true;
+            this.Palka.Location = new System.Drawing.Point(118, 111);
+            this.Palka.Name = "Palka";
+            this.Palka.Size = new System.Drawing.Size(9, 13);
+            this.Palka.TabIndex = 6;
+            this.Palka.Text = "|";
+            // 
+            // Info
+            // 
+            this.Info.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Info.Location = new System.Drawing.Point(143, 247);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(200, 23);
+            this.Info.TabIndex = 5;
+            this.Info.Text = "Информация";
+            this.Info.UseVisualStyleBackColor = false;
+            this.Info.Click += new System.EventHandler(this.Info_Click);
+            // 
+            // AgeDate
+            // 
+            this.AgeDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AgeDate.AutoSize = true;
+            this.AgeDate.Location = new System.Drawing.Point(140, 111);
+            this.AgeDate.Name = "AgeDate";
+            this.AgeDate.Size = new System.Drawing.Size(87, 13);
+            this.AgeDate.TabIndex = 4;
+            this.AgeDate.Text = "Дата Рождения";
+            // 
+            // Gender
+            // 
+            this.Gender.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Gender.AutoSize = true;
+            this.Gender.Location = new System.Drawing.Point(18, 111);
+            this.Gender.Name = "Gender";
+            this.Gender.Size = new System.Drawing.Size(27, 13);
+            this.Gender.TabIndex = 3;
+            this.Gender.Text = "Пол";
+            // 
+            // labelNAME
+            // 
+            this.labelNAME.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNAME.AutoSize = true;
+            this.labelNAME.Location = new System.Drawing.Point(18, 81);
+            this.labelNAME.Name = "labelNAME";
+            this.labelNAME.Size = new System.Drawing.Size(90, 13);
+            this.labelNAME.TabIndex = 2;
+            this.labelNAME.Text = "Имя и Фамилия";
+            // 
+            // New
+            // 
+            this.New.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.New.Location = new System.Drawing.Point(21, 23);
+            this.New.Name = "New";
+            this.New.Size = new System.Drawing.Size(300, 33);
+            this.New.TabIndex = 1;
+            this.New.Text = "Добавить нового";
+            this.New.UseVisualStyleBackColor = false;
+            this.New.Click += new System.EventHandler(this.New_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox.Location = new System.Drawing.Point(21, 150);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(106, 120);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
             // MainForm
             // 
@@ -234,7 +233,7 @@ namespace Work_at_11._03._22
             ((System.ComponentModel.ISupportInitialize)(this.splitter)).EndInit();
             this.splitter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableINFO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,7 +243,7 @@ namespace Work_at_11._03._22
         private System.Windows.Forms.SplitContainer splitter;
         private System.Windows.Forms.DataGridView tableINFO;
         private System.Windows.Forms.Button New;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label Palka;
         private System.Windows.Forms.Button Info;
         private System.Windows.Forms.Label AgeDate;

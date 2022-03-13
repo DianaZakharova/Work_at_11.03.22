@@ -45,7 +45,8 @@ namespace Work_at_11._03._22
             this.DateRoz = new System.Windows.Forms.Label();
             this.photoCHEL = new System.Windows.Forms.PictureBox();
             this.OpenPhoto = new System.Windows.Forms.Button();
-            this.NAZ = new System.Windows.Forms.Button();
+            this.labelHistory = new System.Windows.Forms.Label();
+            this.HistoryBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.photoCHEL)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +142,7 @@ namespace Work_at_11._03._22
             this.DiagnoxBox.Location = new System.Drawing.Point(12, 215);
             this.DiagnoxBox.Multiline = true;
             this.DiagnoxBox.Name = "DiagnoxBox";
-            this.DiagnoxBox.Size = new System.Drawing.Size(453, 100);
+            this.DiagnoxBox.Size = new System.Drawing.Size(453, 35);
             this.DiagnoxBox.TabIndex = 8;
             // 
             // buttonSave
@@ -153,6 +154,7 @@ namespace Work_at_11._03._22
             this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonCancel
             // 
@@ -202,22 +204,29 @@ namespace Work_at_11._03._22
             this.OpenPhoto.UseVisualStyleBackColor = false;
             this.OpenPhoto.Click += new System.EventHandler(this.OpenPhoto_Click);
             // 
-            // NAZ
+            // labelHistory
             // 
-            this.NAZ.Location = new System.Drawing.Point(416, 7);
-            this.NAZ.Name = "NAZ";
-            this.NAZ.Size = new System.Drawing.Size(75, 23);
-            this.NAZ.TabIndex = 15;
-            this.NAZ.Text = "Назад";
-            this.NAZ.UseVisualStyleBackColor = true;
-            this.NAZ.Click += new System.EventHandler(this.NAZ_Click);
+            this.labelHistory.AutoSize = true;
+            this.labelHistory.Location = new System.Drawing.Point(12, 263);
+            this.labelHistory.Name = "labelHistory";
+            this.labelHistory.Size = new System.Drawing.Size(53, 13);
+            this.labelHistory.TabIndex = 15;
+            this.labelHistory.Text = "История ";
+            // 
+            // HistoryBox
+            // 
+            this.HistoryBox.Location = new System.Drawing.Point(15, 279);
+            this.HistoryBox.Name = "HistoryBox";
+            this.HistoryBox.Size = new System.Drawing.Size(450, 20);
+            this.HistoryBox.TabIndex = 16;
             // 
             // SecondForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 356);
-            this.Controls.Add(this.NAZ);
+            this.Controls.Add(this.HistoryBox);
+            this.Controls.Add(this.labelHistory);
             this.Controls.Add(this.OpenPhoto);
             this.Controls.Add(this.photoCHEL);
             this.Controls.Add(this.DateRoz);
@@ -236,7 +245,6 @@ namespace Work_at_11._03._22
             this.MaximumSize = new System.Drawing.Size(519, 395);
             this.Name = "SecondForm";
             this.Text = "SecondForm";
-            this.Load += new System.EventHandler(this.SecondForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.photoCHEL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -261,6 +269,7 @@ namespace Work_at_11._03._22
         private System.Windows.Forms.Label DateRoz;
         private System.Windows.Forms.Button OpenPhoto;
         private System.Windows.Forms.PictureBox photoCHEL;
-        private System.Windows.Forms.Button NAZ;
+        private System.Windows.Forms.Label labelHistory;
+        private System.Windows.Forms.TextBox HistoryBox;
     }
 }

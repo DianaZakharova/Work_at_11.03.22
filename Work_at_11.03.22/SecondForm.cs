@@ -12,7 +12,7 @@ namespace Work_at_11._03._22
 {
     public partial class SecondForm : Form
     {
-        private Person person;
+        public Person person;
         public SecondForm()
         {
             InitializeComponent();
@@ -21,36 +21,23 @@ namespace Work_at_11._03._22
         private void OpenPhoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();// создаем диалоговое окно
-            openFile.ShowDialog();// открываем окно
-            string FileName = openFile.FileName;// берем полный адрес картинки            
-            photoCHEL.ImageLocation = FileName;// грузим картинку в pictureBox
-        }
-
-        private void NAZ_Click(object sender, EventArgs e)
-        {
-            MainForm frm5 = new MainForm();
-            frm5.Show();
-            this.Hide();
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                string FileName = openFile.FileName;// берем полный адрес картинки            
+                photoCHEL.ImageLocation = FileName;// грузим картинку в pictureBox
+            }
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            ActiveForm.Close();
+            Close();
         }
 
-        private void SecondForm_Load(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
-            NameBox.Text = person.name;
-            SurnameBox.Text = person.surname;
-            if (Female.Checked)
-            {
-                Female.Checked = person.pol;
-            }
-            else
-            {
-                Male.Checked = person.pol;
-            }
-            dateTime.Value = person.dateBirth;
+            person = new Person(NameBox.Text, SurnameBox.Text, Female.Checked, dateTime.Value, photoCHEL.Image, DiagnoxBox.Text, HistoryBox.Text);
+            Close();
         }
+
     }
 }
